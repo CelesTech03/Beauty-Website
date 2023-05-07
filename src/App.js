@@ -1,15 +1,15 @@
 import { Route, Routes } from 'react-router-dom';
-import Layout from './components/Layout.js';
-import Catalog from './components/Catalog.js';
-import Account from './components/Account.js';
-import Cart from './components/Cart.js';
+import NavBar from './components/NavBar.js';
+import Catalog from './Views/Catalog.js';
+import Account from './Views/Account.js';
+import Cart from './Views/Cart.js';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path='/' element={<Layout />}>
+        <Route path='/' element={<NavBar />}>
           <Route index element={<Catalog />} />
           <Route path='account' element={<Account />} />
           <Route path='cart' element={<Cart />} />
