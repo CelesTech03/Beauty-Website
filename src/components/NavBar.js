@@ -8,7 +8,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { Link, Outlet } from 'react-router-dom';
 
-function Layout() {
+function NavBar() {
   return (
     <div>
       <AppBar position='static'>
@@ -34,4 +34,4 @@ function Layout() {
   );
 }
 
-export default Layout;
+export default NavBar;
