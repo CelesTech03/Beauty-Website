@@ -1,22 +1,32 @@
-import React from "react";
-import Button from "@mui/material/Button";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Grid from "@mui/material/Grid";
-import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
-import { cards } from "../utils/Constants";
+import React, { useEffect, useState } from "react";
+import {
+  Button,
+  Card,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Container,
+  Grid,
+  Typography,
+} from "@mui/material";
+import { getMakeupByType } from "../api";
 
-function Cards() {
+function Cards({ type }) {
+  const [cards, setCards] = useState([]);
+
+  // Fetch specified type data by passing type to the API request
+  useEffect(() => {
+    getMakeupByType(type).then((response) => {
+      setCards(response);
+    });
+  }, [type]);
+
   return (
     <div>
       <Container sx={{ py: 8 }} maxWidth="lg">
-        {/* End hero unit */}
         <Grid container spacing={3}>
           {cards.map((card) => (
-            <Grid item key={card} xs={12} sm={6} md={3}>
+            <Grid item key={card.id} xs={12} sm={6} md={3}>
               <Card
                 sx={{
                   height: "100%",
@@ -26,16 +36,16 @@ function Cards() {
               >
                 <CardMedia
                   component="img"
-                  image={card.image}
-                  alt={card.title}
+                  image={card.image_link}
+                  alt={card.name}
                   sx={{
                     height: "225px",
-                    objectFit: "scale-down", // Makes the image fit the container
+                    objectFit: "scale-down",
                   }}
                 />
                 <CardContent sx={{ flexGrow: 1 }}>
-                  <Typography gutterBottom variant="h5" component="h2">
-                    {card.title}
+                  <Typography gutterBottom variant="h6" component="h2">
+                    {card.name}
                   </Typography>
                 </CardContent>
                 <CardActions>
