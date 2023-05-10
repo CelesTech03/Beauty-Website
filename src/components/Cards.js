@@ -27,7 +27,7 @@ function Cards({ type }) {
       <Container sx={{ py: 4 }} maxWidth="lg">
         <Grid container spacing={3}>
           {cards.map((card) => (
-            <Grid item key={card.id} xs={12} sm={6} md={3}>
+            <Grid item key={card.id} md={2.4}>
               <Card
                 className="card"
                 sx={{
@@ -46,8 +46,15 @@ function Cards({ type }) {
                   }}
                 />
                 <CardContent sx={{ flexGrow: 1 }}>
-                  <Typography gutterBottom variant="h6" component="h2">
+                  <Typography gutterBottom variant="body2" color="text.secondary">
+                    {card.brand}
+                  </Typography>
+                  <Typography gutterBottom variant="subtitle1" component="h2" fontWeight="bold">
                     {card.name}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    {card.price_sign}
+                    {card.price}
                   </Typography>
                 </CardContent>
                 <CardActions>
