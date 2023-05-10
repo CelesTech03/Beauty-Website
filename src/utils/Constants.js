@@ -1,4 +1,4 @@
-// Products data
+// Products mock data
 export const cards = [
   {
     id: 1,
