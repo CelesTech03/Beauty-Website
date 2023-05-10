@@ -1,6 +1,6 @@
 import Axios from "axios";
 
-export const getMakeupByType = (type) => {
+export const getProductByType = (type) => {
   return Axios.get(
     `http://makeup-api.herokuapp.com/api/v1/products.json?product_type=${type}`
   )
