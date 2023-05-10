@@ -1,7 +1,7 @@
 import Cards from "../components/Cards";
 import { Typography, Container, Box } from "@mui/material";
 
-function Catalog() {
+function Homepage() {
   return (
     <div>
       <Box
@@ -40,4 +40,4 @@ function Catalog() {
   );
 }
 
-export default Catalog;
+export default Homepage;
