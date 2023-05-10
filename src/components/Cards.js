@@ -9,18 +9,25 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
-import { getMakeupByType } from "../api";
+import { getProductByType } from "../api";
+import { useNavigate } from "react-router-dom";
 import "./styles/CardsCss.css";
 
 function Cards({ type }) {
   const [cards, setCards] = useState([]);
+  const navigate = useNavigate();
 
   // Fetch specified type data by passing type to the API request
   useEffect(() => {
-    getMakeupByType(type).then((response) => {
+    getProductByType(type).then((response) => {
       setCards(response);
     });
   }, [type]);
+
+  // Navigate to the product details page when a card is clicked
+  const handleCardClick = (id) => {
+    navigate(`/products/${id}`);
+  };
 
   return (
     <div>
@@ -35,6 +42,7 @@ function Cards({ type }) {
                   display: "flex",
                   flexDirection: "column",
                 }}
+                onClick={() => handleCardClick(card.id)}
               >
                 <CardMedia
                   component="img"
@@ -46,10 +54,19 @@ function Cards({ type }) {
                   }}
                 />
                 <CardContent sx={{ flexGrow: 1 }}>
-                  <Typography gutterBottom variant="body2" color="text.secondary">
+                  <Typography
+                    gutterBottom
+                    variant="body2"
+                    color="text.secondary"
+                  >
                     {card.brand}
                   </Typography>
-                  <Typography gutterBottom variant="subtitle1" component="h2" fontWeight="bold">
+                  <Typography
+                    gutterBottom
+                    variant="subtitle1"
+                    component="h2"
+                    fontWeight="bold"
+                  >
                     {card.name}
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
