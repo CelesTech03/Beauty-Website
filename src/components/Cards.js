@@ -10,6 +10,7 @@ import {
   Typography,
 } from "@mui/material";
 import { getMakeupByType } from "../api";
+import "./styles/CardsCss.css";
 
 function Cards({ type }) {
   const [cards, setCards] = useState([]);
@@ -23,11 +24,12 @@ function Cards({ type }) {
 
   return (
     <div>
-      <Container sx={{ py: 8 }} maxWidth="lg">
+      <Container sx={{ py: 4 }} maxWidth="lg">
         <Grid container spacing={3}>
           {cards.map((card) => (
             <Grid item key={card.id} xs={12} sm={6} md={3}>
               <Card
+                className="card"
                 sx={{
                   height: "100%",
                   display: "flex",
