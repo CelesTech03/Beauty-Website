@@ -63,20 +63,34 @@ function Cards({ type }) {
                   </Typography>
                   <Typography
                     gutterBottom
-                    variant="subtitle1"
+                    variant="subtitle2"
                     component="h2"
                     fontWeight="bold"
                   >
                     {card.name}
                   </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    {card.price_sign}
+                  <Typography
+                    variant="body2"
+                    color="text.secondary"
+                    fontWeight="bold"
+                  >
+                    {/* Default $ sign if API price_sign is null */}
+                    {card.price_sign || "$"}
                     {card.price}
                   </Typography>
                 </CardContent>
                 <CardActions>
-                  <Button size="small">View</Button>
-                  <Button size="small">Add To Bag</Button>
+                  <Button
+                    size="small"
+                    sx={{
+                      border: "1px solid black",
+                      width: "100%",
+                      color: "black",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    Add To Bag
+                  </Button>
                 </CardActions>
               </Card>
             </Grid>
