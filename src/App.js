@@ -4,7 +4,9 @@ import Homepage from './Views/Homepage.js';
 import Account from './Views/Account.js';
 import Cart from './Views/Cart.js';
 import ProductDetails from './Views/ProductDetails.js';
+import Checkout from './Views/Checkout.js';
 import './App.css';
+
 
 function App() {
   return (
@@ -14,6 +16,7 @@ function App() {
           <Route index element={<Homepage />} />
           <Route path='account' element={<Account />} />
           <Route path='cart' element={<Cart />} />
+          <Route path='checkout' element={<Checkout />} />
           <Route path="/products/:id" element={<ProductDetails />} />
         </Route>
       </Routes>
