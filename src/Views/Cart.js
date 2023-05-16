@@ -112,7 +112,9 @@ const Cart = () => {
         My cart
       </Typography>
 
-      <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
+      <Divider sx={{ mb: 1, background: '#838383', borderBottomWidth: 1.5 }} />
+
+      <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 2 }}>
         <Card sx={{ display: 'flex', flexDirection: 'column' }}>
           {products.map(product => (
             <Item
@@ -192,9 +194,7 @@ const Cart = () => {
               </Button>
             </CardContent>
           </Card>
-
         </Box>
-
       </Box>
     </Container>
   );
