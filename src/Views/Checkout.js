@@ -5,14 +5,12 @@ import {
   Box,
   Container,
   CardContent,
-  Button,
   Divider,
   TextField,
   Radio,
   RadioGroup,
   FormControlLabel,
   FormControl,
-  FormLabel
 } from "@mui/material";
 
 import Summary from "../utils/Summary";
@@ -24,18 +22,20 @@ const Checkout = () => {
     setValue(event.target.value)
   }
 
+  
+
   // reusable form for shipping & billing address
   const AddressForm = ({ name }) => {
     return (
       <Box
         component="form"
         sx={{
-          '& .MuiTextField-root': { m: 0.5 },
+          '& .MuiTextField-root': { m: 0.25 },
         }}>
+        <Typography variant="h6" align='left' sx={{ mb: 1 }}>
+          {name}
+        </Typography>
         <Card>
-          <Typography variant="h6" align='left' sx={{ ml: 2.5, mt: 2, mb: -3 }}>
-            {name}
-          </Typography>
           <CardContent>
             <Box sx={{ display: 'flex', justifyContent: 'flex-start' }}>
               <TextField label="Country/Region" variant="standard" sx={{ width: '100%' }} />
@@ -82,12 +82,12 @@ const Checkout = () => {
           <Box
             component="form"
             sx={{
-              '& .MuiTextField-root': { m: 0.5 },
+              '& .MuiTextField-root': { m: 0.25 },
             }}>
-            <Card sx={{ mt: 1 }}>
-              <Typography variant="h6" align='left' sx={{ ml: 2.5, mt: 2, mb: -3 }}>
+              <Typography variant="h6" align='left' sx={{ mt: 1, mb: 1 }}>
                 Payment
               </Typography>
+            <Card sx={{ mt: 1 }}>
               <CardContent>
                 <Box sx={{ display: 'flex', justifyContent: 'flex-start' }}>
                   <TextField label="Card number" variant="standard" sx={{ width: '100%' }} />
@@ -105,38 +105,36 @@ const Checkout = () => {
             </Card>
           </Box>
 
-          <Box>
-            <CardContent
-              sx={{
-                display: 'flex',
-                justifyContent: 'flex-start',
-                alignItems: 'flex-start',
-                flexDirection: 'column'
-              }}>
-              <Typography variant="h6" >
-                Billing Address
-              </Typography>
-              <Typography variant="subtitle1" >
-                Select the address that matches your card or payment method.
-              </Typography>
+          <Box sx={{
+            display: 'flex',
+            justifyContent: 'flex-start',
+            alignItems: 'flex-start',
+            flexDirection: 'column',
+            mt: 3
+          }}>
+            <Typography variant="h6" sx={{mt: 1}} >
+              Billing Address
+            </Typography>
+            <Typography variant="subtitle1" >
+              Select the address that matches your card or payment method.
+            </Typography>
 
-              <FormControl sx={{ mt: 1, mb: 1 }}>
-                <RadioGroup
-                  aria-labelledby="demo-controlled-radio-buttons-group"
-                  name="controlled-radio-buttons-group"
-                  value={value}
-                  onChange={handleChange}
-                  sx={{ display: 'flex', flexDirection: 'row' }}
-                >
-                  <FormControlLabel value="same" control={<Radio />} label="Same as shipping address" />
-                  <FormControlLabel value="different" control={<Radio />} label="	Use a different billing address" />
-                </RadioGroup>
-              </FormControl>
-              {value === 'different' ? <AddressForm /> : ""}
-            </CardContent>
+            <FormControl sx={{ mt: 1, mb: 1 }}>
+              <RadioGroup
+                aria-labelledby="demo-controlled-radio-buttons-group"
+                name="controlled-radio-buttons-group"
+                value={value}
+                onChange={handleChange}
+                sx={{ display: 'flex', flexDirection: 'row' }}
+              >
+                <FormControlLabel value="same" control={<Radio />} label="Same as shipping address" />
+                <FormControlLabel value="different" control={<Radio />} label="	Use a different billing address" />
+              </RadioGroup>
+            </FormControl>
+            {value === 'different' ? <AddressForm /> : ""}
           </Box>
         </Box>
-        <Box sx={{width: '40%'}}>
+        <Box sx={{ width: '40%' }}>
           <Summary title="Pay now" />
         </Box>
       </Box>
