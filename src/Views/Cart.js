@@ -69,10 +69,10 @@ const Cart = () => {
           justifyContent: 'center',
           flexGrow: 1
         }}>
-          <Typography variant="body2" color="subtitle1" fontWeight="bold">
+          <Typography variant="body2" >
             {brand}
           </Typography>
-          <Typography gutterBottom variant="subtitle1" color="red">
+          <Typography gutterBottom variant="subtitle1">
             {name}
           </Typography>
           <Box sx={{

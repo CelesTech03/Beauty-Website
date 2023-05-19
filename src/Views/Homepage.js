@@ -9,8 +9,17 @@ function Homepage() {
           pt: 6,
         }}
       >
-        <Typography variant="h2" align="center" color="#41337A" gutterBottom>
-          Website Name
+        <Typography
+          variant="h3"
+          align="center"
+          color="#41337A"
+          gutterBottom
+          sx={{
+            fontFamily: 'monospace',
+            fontWeight: 700,
+            letterSpacing: '.1rem',
+          }}>
+          Get Cute With Beautify
         </Typography>
         <Typography
           variant="h5"
@@ -18,10 +27,7 @@ function Homepage() {
           color="text.secondary"
           paragraph
         >
-          Short summary of beauty company. Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Let Beautify to become your trusted companion on your beauty journey
         </Typography>
       </Box>
       <Container sx={{ textAlign: "left", color: "#41337A" }}>
