@@ -48,59 +48,62 @@ const Cart = () => {
   // Item component for each product
   const Item = ({ image, name, brand, price }) => {
     return (
-      <Grid container spacing={0.5} >
-        <Grid item xs={2}>
+      <Box sx={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        gap: 5,
+      }}>
+        <Box sx={{ maxWidth: 130, p: 1, m: 1 }}>
           <CardMedia
             component="img"
             image={image}
             alt={name}
-            sx={{ objectFit: "scale-down", m: 1 }}
+            sx={{ p: 1, objectFit: "contain" }}
           />
-        </Grid>
+        </Box>
 
-        <Grid item xs={4} md={6}>
-      <CardContent
-        sx={{
+        <Box sx={{
           display: "flex",
           alignItems: "flex-start",
           flexDirection: 'column',
+          justifyContent: 'center',
+          flexGrow: 1
         }}>
-        <Typography variant="body2" color="subtitle1" fontWeight="bold">
-          {brand}
-        </Typography>
-        <Typography gutterBottom variant="subtitle1" color="red">
-          {name}
-        </Typography>
-        <Box sx={{
-          boxShadow: 1,
-          borderRadius: '10px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center'
-        }}>
-          <Button onClick={increaseCount}>
-            <KeyboardArrowUpIcon />
-          </Button>
-          <Typography variant="subtitle1">
-            {count}
+          <Typography variant="body2" >
+            {brand}
           </Typography>
-          <Button onClick={decreaseCount} disabled={!count}>
-            {count === 0 ? "" : <KeyboardArrowDownIcon />}
-          </Button>
+          <Typography gutterBottom variant="subtitle1">
+            {name}
+          </Typography>
+          <Box sx={{
+            boxShadow: 1,
+            borderRadius: '10px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}>
+            <Button onClick={increaseCount}>
+              <KeyboardArrowUpIcon />
+            </Button>
+            <Typography variant="subtitle1">
+              {count}
+            </Typography>
+            <Button onClick={decreaseCount} disabled={!count}>
+              {count === 0 ? "" : <KeyboardArrowDownIcon />}
+            </Button>
+          </Box>
         </Box>
-      </CardContent>
-        </Grid>
 
-        <Grid item xs={2}>
-      <Typography
-        align="center"
-        variant="h6"
-        sx={{ mt: "15px", fontWeight: 'bold' }}
-      >
-        ${price}
-      </Typography>
-        </Grid>
-      </Grid>
+        <Box sx={{ display: "flex", mt: 3, p: 2, mr: 1 }}>
+          <Typography
+            align="right"
+            variant="h6"
+            sx={{ fontWeight: 'bold' }}
+          >
+            ${price}
+          </Typography>
+        </Box>
+      </Box >
     )
   }
 
@@ -113,7 +116,7 @@ const Cart = () => {
       <Divider sx={{ mb: 1, background: '#838383', borderBottomWidth: 1.5 }} />
 
       <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 2 }}>
-        <Card sx={{ display: 'flex', flexDirection: 'column' }}>
+        <Card>
           {products.map(product => (
             <Item
               key={product.id}
