@@ -104,59 +104,6 @@ const Cart = () => {
           </Typography>
         </Box>
       </Box >
-      // <Grid container spacing={0.5} >
-      //   <Grid item xs={2}>
-      //     <CardMedia
-      //       component="img"
-      //       image={image}
-      //       alt={name}
-      //       sx={{ objectFit: "scale-down", m: 1 }}
-      //     />
-      //   </Grid>
-
-      //   <Grid item xs={4} md={6}>
-      //     <CardContent
-      //       sx={{
-      //         display: "flex",
-      //         alignItems: "flex-start",
-      //         flexDirection: 'column',
-      //       }}>
-      //       <Typography variant="body2" color="subtitle1" fontWeight="bold">
-      //         {brand}
-      //       </Typography>
-      //       <Typography gutterBottom variant="subtitle1" color="red">
-      //         {name}
-      //       </Typography>
-      //       <Box sx={{
-      //         boxShadow: 1,
-      //         borderRadius: '10px',
-      //         display: 'flex',
-      //         alignItems: 'center',
-      //         justifyContent: 'center'
-      //       }}>
-      //         <Button onClick={increaseCount}>
-      //           <KeyboardArrowUpIcon />
-      //         </Button>
-      //         <Typography variant="subtitle1">
-      //           {count}
-      //         </Typography>
-      //         <Button onClick={decreaseCount} disabled={!count}>
-      //           {count === 0 ? "" : <KeyboardArrowDownIcon />}
-      //         </Button>
-      //       </Box>
-      //     </CardContent>
-      //   </Grid>
-
-      //   <Grid item xs={2}>
-      //     <Typography
-      //       align="center"
-      //       variant="h6"
-      //       sx={{ mt: "15px", fontWeight: 'bold' }}
-      //     >
-      //       ${price}
-      //     </Typography>
-      //   </Grid>
-      // </Grid>
     )
   }
 
