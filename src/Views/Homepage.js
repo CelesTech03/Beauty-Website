@@ -39,6 +39,8 @@ function Homepage() {
         <Cards type="nail_polish" />
         <Typography variant="h4">Foundation</Typography>
         <Cards type="foundation" />
+        <Typography variant="h4">Bronzer</Typography>
+        <Cards type="bronzer" />
         <Typography variant="h4">Blush</Typography>
         <Cards type="blush" />
       </Container>

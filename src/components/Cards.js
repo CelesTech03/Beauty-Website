@@ -62,7 +62,7 @@ function Cards({ type }) {
                 <CardContent sx={{ flexGrow: 1 }}>
                   <Typography
                     gutterBottom
-                    variant="body2"
+                    variant="body1"
                     color="text.secondary"
                   >
                     {card.brand}
@@ -100,7 +100,7 @@ function Cards({ type }) {
                     }}
                     onClick={(event) => handleAddToBag(event)}
                   >
-                    Add To Bag
+                    ADD TO CART
                   </Button>
                 </CardActions>
               </Card>
