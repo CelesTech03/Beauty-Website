@@ -12,3 +12,14 @@ export const getProductByType = (type) => {
       return [];
     });
 };
+
+export const getProductById = (id) => {
+  return Axios.get(`http://makeup-api.herokuapp.com/api/v1/products/${id}.json`)
+    .then((response) => {
+      return response.data;
+    })
+    .catch((error) => {
+      console.log(error);
+      return [];
+    });
+};
