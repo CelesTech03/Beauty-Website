@@ -29,6 +29,12 @@ function Cards({ type }) {
     navigate(`/products/${id}`);
   };
 
+  // Navigate to cart when add to bag is clicked
+  const handleAddToBag = (event) => {
+    event.stopPropagation();
+    navigate(`/cart`);
+  };
+
   return (
     <div>
       <Container sx={{ py: 4 }} maxWidth="lg">
@@ -87,7 +93,12 @@ function Cards({ type }) {
                       width: "100%",
                       color: "black",
                       fontWeight: "bold",
+                      "&:hover": {
+                        backgroundColor: "black",
+                        color: "white",
+                      },
                     }}
+                    onClick={(event) => handleAddToBag(event)}
                   >
                     Add To Bag
                   </Button>
