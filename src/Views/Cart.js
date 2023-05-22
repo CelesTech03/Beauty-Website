@@ -110,7 +110,7 @@ const Cart = () => {
   return (
     <Container sx={{ mb: 2 }}>
       <Typography variant="h4" align="left" sx={{ mt: 2 }} gutterBottom >
-        My cart
+        My Cart
       </Typography>
 
       <Divider sx={{ mb: 1, background: '#838383', borderBottomWidth: 1.5 }} />
