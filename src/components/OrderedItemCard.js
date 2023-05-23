@@ -8,28 +8,35 @@ import {
   CardContent,
   CardActions,
 } from "@mui/material";
+import { Link } from 'react-router-dom';
 
 function OrderedItemCard({ orderedItem }) {
   return (
-    <Card sx={{display: "flex",}}>
-      <CardMedia sx={{height: "225px", objectFit: "scale-down",}} 
-      component="img" image={orderedItem.imageUrl} alt="eyeshadow" />
-      <CardContent sx={{display: "flex", flexDirection: "column",}}>
-        <Typography>
-          {orderedItem.brand}
-        </Typography>
-        <Typography>
+    <Card variant="outlined" sx={{display: "flex", mb: "20px",}}>
+      <CardMedia sx={{width: "180px", objectFit: "scale-down", alignSelf:"flex-start",}} 
+      component="img" image={orderedItem.imageUrl} alt={orderedItem.name} />
+      <CardContent sx={{
+        display: "flex",
+        flexDirection: "column",
+        "& > :not(style)": {
+          textAlign: "left",
+        },
+      }}>
+        <Typography component="h5">
           {orderedItem.name}
         </Typography>
-        <Typography>
+        <Typography component="p">
+          {orderedItem.brand}
+        </Typography>
+        <Typography component="p">
           {orderedItem.price}
         </Typography>
-        <Typography>
-          {orderedItem.dateOrdered}
+        <Typography component="p">
+          Order placed on {orderedItem.dateOrdered}
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button>
+      <CardActions sx={{ml: "auto",}}>
+        <Button component={Link} to={"../track-order/" + orderedItem.id}>
           Track Order
         </Button>
       </CardActions>
