@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
-import { getProductByType } from "../api";
+import { getProductByType } from '../api';
 import OrderedItemCard from '../components/OrderedItemCard';
+import { orderedItems } from '../utils/OrderedItemData';
 import {
   Container,
   Typography,
@@ -8,42 +9,17 @@ import {
   Avatar,
   Button,
   Card,
+  Divider,
 } from "@mui/material";
 import Face2Icon from '@mui/icons-material/Face2';
 
 function Account() {
-  const orderedItems = [
-    {
-      id: 1,
-      name: "Hyperlash Mascara",
-      brand: "Smashbox",
-      price: "$23.00",
-      imageUrl: "https://www.smashbox.com/media/images/products/388x396/sbx_sku_35576_388x396_0.jpg",
-      dateOrdered: "04/14/2023",
-    },
-    {
-      id: 2,
-      name: "L'Oreal Extraordinaire Gel Lacque Nail Colour",
-      brand: "L'Oreal",
-      price: "$8.99",
-      imageUrl: "https://d3t32hsnjxo7q6.cloudfront.net/i/284a3bf668e98f69cc51a58ff9de1d1a_ra,w158,h184_pa,w158,h184.jpg",
-      dateOrdered: "05/10/2023",
-    },
-    {
-      id: 3,
-      name: "Cargo Cosmetics HD Picture Perfect Blush Highlighter",
-      brand: "Cargo Cosmetics",
-      price: "$32.00",
-      imageUrl: "https://d3t32hsnjxo7q6.cloudfront.net/i/c976f8b3aabe8368fdc673e556159a13_ra,w158,h184_pa,w158,h184.jpeg",
-      dateOrdered: "05/20/2023,"
-    },
-  ];
-
   return (
     <Container>
       <Typography variant="h4" textAlign="left" gutterBottom>
         Account
       </Typography>
+      <Divider />
       <Box sx={{
         display: "flex",
         flexDirection: {xs: "column", md: "row",},
@@ -103,8 +79,8 @@ function Account() {
         <Typography variant="h5" textAlign="left">
           Recent Orders
         </Typography>
-        {orderedItems.map((orderedItem, index) => {
-           return <OrderedItemCard key={index} orderedItem={orderedItem} />;
+        {orderedItems.map((orderedItem) => {
+           return <OrderedItemCard key={orderedItem.id} orderedItem={orderedItem} />;
         })
         }
         <Typography sx={{textDecoration: "underline", textAlign: "left", my: "20px",}}>
