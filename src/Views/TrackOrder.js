@@ -101,8 +101,8 @@ function TrackOrder() {
         </CardContent>
       </Card>
       <Box sx={{display: "flex", flexDirection: "row",}}>
-        <Typography sx={{textAlign: "left", my: "2em", mr:"1em",}}>
-            Tracking number: 
+        <Typography sx={{textAlign: "left", my: "2em", mr:"0.5em",}}>
+            Tracking number:
         </Typography>
         <Typography sx={{textDecoration: "underline", textAlign: "left", my: "2em",}}>
           #01234567890123456789
