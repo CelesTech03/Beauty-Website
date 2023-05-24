@@ -36,7 +36,7 @@ function OrderedItemCard({ orderedItem }) {
         </Typography>
       </CardContent>
       <CardActions sx={{ml: "auto", display: "flex", alignItems: {xs: ""},}}>
-        <Button component={Link} to={"../track-order/" + orderedItem.id} sx={{
+        <Button variant="contained" component={Link} to={"../track-order/" + orderedItem.id} sx={{
           mt: "1em",
           mb: {xs: "2em", md: "1em"},
           mr: "2em",

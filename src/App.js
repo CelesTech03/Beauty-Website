@@ -20,8 +20,9 @@ const theme = createTheme({
     }
   },
   typography: {
-    fontFamily: '"Segoe UI"',
+    //fontFamily: '"Segoe UI"',
     h4: {
+      fontFamily: ['Segoe UI',].join(','),
       color: '#41337a',
       fontWeight: '600'
     },

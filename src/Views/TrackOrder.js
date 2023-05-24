@@ -37,7 +37,7 @@ function TrackOrder() {
 
   return (
     <Container>
-      <Typography variant="h4" textAlign="left" gutterBottom sx={{mb: "0.5em", mt: "1em",}}>
+      <Typography variant="h4" textAlign="left" gutterBottom sx={{mb: "0.5em", mt: "1em", fontFamily: "monospace", fontWeight: 700, letterSpacing: ".1rem"}}>
         Track Order
       </Typography>
       <Divider sx={{mb: "2em",}} />
@@ -68,7 +68,7 @@ function TrackOrder() {
         </CardContent>
       </Card>
 
-      <Typography variant="h4" textAlign="left" sx={{mt: "1em",mb: "0.5em",}}>
+      <Typography variant="h4" textAlign="left" sx={{mt: "1em",mb: "0.5em", fontFamily: "monospace", fontWeight: 700, letterSpacing: ".1rem"}}>
           Delivery History
       </Typography>
       <Divider sx={{mb: "2em",}} />

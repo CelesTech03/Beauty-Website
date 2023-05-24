@@ -18,7 +18,7 @@ import Face2Icon from '@mui/icons-material/Face2';
 function Account() {
   return (
     <Container>
-      <Typography variant="h4" textAlign="left" sx={{mb: "0.5em", mt: "1em",}}>
+      <Typography variant="h4" textAlign="left" sx={{mb: "0.5em", mt: "1em", fontFamily: "monospace", fontWeight: 700, letterSpacing: ".1rem"}}>
         Account
       </Typography>
       <Divider />
@@ -91,7 +91,7 @@ function Account() {
       </Box>
       {/* Order info */}
       <Box sx={{display: "flex", flexDirection: "column",}}>
-        <Typography variant="h4" textAlign="left" sx={{my: "0.5em",}}>
+        <Typography variant="h4" textAlign="left" sx={{my: "0.5em", fontFamily: "monospace", fontWeight: 700, letterSpacing: ".1rem"}}>
           Recent Orders
         </Typography>
         <Divider sx={{mb: "2em",}} />
