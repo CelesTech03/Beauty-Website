@@ -87,11 +87,9 @@ function ProductDetails() {
                   mt: 4,
                 }}
               >
-                Product Details:
+                Details:
               </Typography>
-              <Typography variant="body2">
-                {product.description}
-              </Typography>
+              <Typography variant="body2">{product.description}</Typography>
             </Grid>
           </Grid>
         </Grid>
