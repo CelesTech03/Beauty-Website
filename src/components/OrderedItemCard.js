@@ -41,7 +41,7 @@ function OrderedItemCard({ orderedItem }) {
           mb: {xs: "2em", md: "1em"},
           mr: "2em",
           height: "4em",
-          width: '100%',
+          width: "18em",
           backgroundColor: "#ff4500",
         }}>
           <Typography sx={{mx: {xs: "2em", md: "3em"}, my: "2em",}}>

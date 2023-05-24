@@ -27,7 +27,7 @@ function Account() {
         flexDirection: {xs: "column", md: "row",},
         justifyContent: "space-between",
         "& > :not(style)": {
-          my: "30px",
+          my: "2em",
         },
       }}>
         {/* Personal info */}
@@ -35,11 +35,11 @@ function Account() {
           <Box sx={{display: "flex",}}>
             <Avatar sx={{
               bgcolor: "secondary.main",
-              height: "10em",
-              width: "10em",
+              height: "9.85em",
+              width: "9.85em",
               m: "2em",
             }}>
-              <Face2Icon color="primary" sx={{height: "150px", width: "150px",}} />
+              <Face2Icon color="primary" sx={{height: "6em", width: "6em",}} />
             </Avatar>
             <Box sx={{display: "flex", flexDirection: "column", mx: "2em", my: "4em",}}>
               <Typography variant="h5" sx={{mb: "1em",}}>
