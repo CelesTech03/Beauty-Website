@@ -22,7 +22,7 @@ const Checkout = () => {
     setValue(event.target.value)
   }
 
-  
+
 
   // reusable form for shipping & billing address
   const AddressForm = ({ name }) => {
@@ -67,13 +67,23 @@ const Checkout = () => {
 
   return (
     <Container sx={{ mb: 5 }}>
-      <Typography variant="h4" align="left" sx={{ mt: 2 }} gutterBottom >
+      <Typography
+        variant="h4"
+        textAlign="left"
+        sx={{
+          mb: "0.5em",
+          mt: "1em",
+          fontFamily: "monospace",
+          fontWeight: 700,
+          letterSpacing: ".1rem"
+        }}
+      >
         Checkout
       </Typography>
 
-      <Divider sx={{ mb: 1, background: '#838383', borderBottomWidth: 1.5 }} />
+      <Divider />
 
-      <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 2 }}>
+      <Box sx={{ display: { xs: 'inline', md: 'flex' }, justifyContent: 'space-between', mt: 2 }}>
         <Box>
           <Box sx={{ mb: 4 }}>
             <AddressForm name="Shipping Address" />
@@ -84,9 +94,9 @@ const Checkout = () => {
             sx={{
               '& .MuiTextField-root': { m: 0.25 },
             }}>
-              <Typography variant="h6" align='left' sx={{ mt: 1, mb: 1 }}>
-                Payment
-              </Typography>
+            <Typography variant="h6" align='left' sx={{ mt: 1, mb: 1 }}>
+              Payment
+            </Typography>
             <Card sx={{ mt: 1 }}>
               <CardContent>
                 <Box sx={{ display: 'flex', justifyContent: 'flex-start' }}>
@@ -112,7 +122,7 @@ const Checkout = () => {
             flexDirection: 'column',
             mt: 3
           }}>
-            <Typography variant="h6" sx={{mt: 1}} >
+            <Typography variant="h6" sx={{ mt: 1 }} >
               Billing Address
             </Typography>
             <Typography variant="subtitle1" >
