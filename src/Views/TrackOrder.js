@@ -37,11 +37,10 @@ function TrackOrder() {
 
   return (
     <Container>
-      <Typography variant="h4" textAlign="left" gutterBottom>
+      <Typography variant="h4" textAlign="left" gutterBottom sx={{mb: "0.5em", mt: "1em",}}>
         Track Order
       </Typography>
-      <Divider />
-
+      <Divider sx={{mb: "2em",}} />
       <Card variant="outlined" sx={{display: "flex", flexDirection: "row",}}>
         <CardMedia sx={{width: "16em", objectFit: "scale-down", alignSelf:"flex-start", m: "2em",}} 
         component="img" image={orderedItem.imageUrl} alt={orderedItem.name} />
@@ -69,31 +68,34 @@ function TrackOrder() {
         </CardContent>
       </Card>
 
-      <Typography variant="h4" textAlign="left">
+      <Typography variant="h4" textAlign="left" sx={{mt: "1em",mb: "0.5em",}}>
           Delivery History
       </Typography>
+      <Divider sx={{mb: "2em",}} />
       <Card variant="outlined" sx={{display: "flex", flexDirection: "column",}}>
-        <CardContent sx={{display: "flex", flexDirection: "row", justifyContent: "space-between",}}>
-          <Typography>
+        <CardContent sx={{display: "flex", flexDirection: "row", justifyContent: "space-between", my: "0.5em",}}>
+          <Typography sx={{mx: "1em",}}>
             Location 3
           </Typography>
-          <Typography>
+          <Typography sx={{mx: "1em",}}>
             {deliveryDates[2]} 4:31 PM
           </Typography>
         </CardContent>
-        <CardContent sx={{display: "flex", flexDirection: "row", justifyContent: "space-between",}}>
-          <Typography>
+        <Divider />
+        <CardContent sx={{display: "flex", flexDirection: "row", justifyContent: "space-between", my: "0.5em",}}>
+          <Typography sx={{mx: "1em",}}>
             Location 2
           </Typography>
-          <Typography>
+          <Typography sx={{mx: "1em",}}>
             {deliveryDates[1]} 10:39 AM
           </Typography>
         </CardContent>
-        <CardContent sx={{display: "flex", flexDirection: "row", justifyContent: "space-between",}}>
-          <Typography>
+        <Divider />
+        <CardContent sx={{display: "flex", flexDirection: "row", justifyContent: "space-between", my: "0.5em",}}>
+          <Typography sx={{mx: "1em",}}>
             Location 1
           </Typography>
-          <Typography>
+          <Typography sx={{mx: "1em",}}>
             {deliveryDates[0]} 2:42 PM
           </Typography>
         </CardContent>

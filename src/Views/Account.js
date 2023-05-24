@@ -10,13 +10,15 @@ import {
   Button,
   Card,
   Divider,
+  CardContent,
+  CardActions,
 } from "@mui/material";
 import Face2Icon from '@mui/icons-material/Face2';
 
 function Account() {
   return (
     <Container>
-      <Typography variant="h4" textAlign="left" gutterBottom>
+      <Typography variant="h4" textAlign="left" sx={{mb: "0.5em", mt: "1em",}}>
         Account
       </Typography>
       <Divider />
@@ -33,14 +35,14 @@ function Account() {
           <Box sx={{display: "flex",}}>
             <Avatar sx={{
               bgcolor: "secondary.main",
-              height: "220px",
-              width: "220px",
-              m: "20px",
+              height: "10em",
+              width: "10em",
+              m: "2em",
             }}>
               <Face2Icon color="primary" sx={{height: "150px", width: "150px",}} />
             </Avatar>
-            <Box sx={{display: "flex", flexDirection: "column", mx: "30px", my: "60px",}}>
-              <Typography variant="h5">
+            <Box sx={{display: "flex", flexDirection: "column", mx: "2em", my: "4em",}}>
+              <Typography variant="h5" sx={{mb: "1em",}}>
                 Firstname Lastname
               </Typography>
               <Typography variant="p">
@@ -57,33 +59,47 @@ function Account() {
               </Typography>
             </Box>
           </Box>
-          <Button sx={{mb: "20px",}}>
+          <Button variant="contained" sx={{my: "1em", height: "4em", width: '40%', backgroundColor: "#ff4500"}}>
             Edit
           </Button>
         </Card>
         {/* Payment info */}
         <Card variant="outlined" sx={{display: "flex", flexDirection: "column",}}>
-          <Typography variant="h5" sx={{mt: "60px", mb: "30px", textAlign: "left",}}>
-            Payment Information
-          </Typography>
-          <Typography variant="p">
-            Bank or card type or something idk
-          </Typography>
-          <Button sx={{mb: "20px",}}>
-            Edit
-          </Button>
+          <CardContent sx={{display: "flex", flexDirection: "column",}}>
+            <Typography variant="h5" sx={{mt: "1em", ml: "1em", mr:"2em", textAlign: "left",}}>
+              Payment Information
+            </Typography>
+            <Typography variant="p" sx={{mt: "3em", mx: "8em",}}>
+              Card type: Visa
+            </Typography>
+            <Typography variant="p" sx={{mx: "8em",}}>
+              Bank: Citibank
+            </Typography>
+            <Typography variant="p" sx={{mx: "8em",}}>
+              Card number: ending in 1234
+            </Typography>
+            <Typography variant="p" sx={{mb: "3em", mx: "8em",}}>
+              Expiration date: 03/18/2027
+            </Typography>
+          </CardContent>
+          <CardActions sx={{display: "flex", flexDirection: "column",}}>
+            <Button variant="contained" sx={{my: "2em", height: "4em", width: '40%', backgroundColor: "#ff4500"}}>
+              Edit
+            </Button>
+          </CardActions>
         </Card>
       </Box>
       {/* Order info */}
       <Box sx={{display: "flex", flexDirection: "column",}}>
-        <Typography variant="h5" textAlign="left">
+        <Typography variant="h4" textAlign="left" sx={{my: "0.5em",}}>
           Recent Orders
         </Typography>
+        <Divider sx={{mb: "2em",}} />
         {orderedItems.map((orderedItem) => {
            return <OrderedItemCard key={orderedItem.id} orderedItem={orderedItem} />;
         })
         }
-        <Typography sx={{textDecoration: "underline", textAlign: "left", my: "20px",}}>
+        <Typography sx={{textDecoration: "underline", textAlign: "left", mb: "2em",}}>
           View all orders
         </Typography>
       </Box>
