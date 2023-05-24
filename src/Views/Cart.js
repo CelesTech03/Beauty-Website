@@ -46,7 +46,7 @@ const Cart = () => {
   }
 
   // Item component for each product
-  const Item = ({ image, name, brand, price }) => {
+  const Item = ({ image, name, brand, price, id }) => {
     return (
       <Box sx={{
         display: 'flex',
@@ -109,17 +109,28 @@ const Cart = () => {
 
   return (
     <Container sx={{ mb: 2 }}>
-      <Typography variant="h4" align="left" sx={{ mt: 2 }} gutterBottom >
+      <Typography
+        variant="h4"
+        textAlign="left"
+        sx={{
+          mb: "0.5em",
+          mt: "1em",
+          fontFamily: "monospace",
+          fontWeight: 700,
+          letterSpacing: ".1rem"
+        }}
+      >
         My Cart
       </Typography>
 
-      <Divider sx={{ mb: 1, background: '#838383', borderBottomWidth: 1.5 }} />
+      <Divider />
 
-      <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 2 }}>
+      <Box sx={{ display: { xs: 'inline', md: 'flex' }, justifyContent: 'space-between', mt: 2 }}>
         <Card>
           {products.map(product => (
             <Item
               key={product.id}
+              id={product.id}
               brand={product.brand}
               image={product.image_link}
               name={product.name}
