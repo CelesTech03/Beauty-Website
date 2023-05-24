@@ -1,24 +1,25 @@
 import Cards from "../components/Cards";
 import { Typography, Container, Box } from "@mui/material";
+import makeupBanner from "../assets/makeupBanner.jpeg";
 
 function Homepage() {
   return (
     <div>
       <Box
         sx={{
-          pt: 6,
+          pt: 2,
         }}
       >
         <Typography
-          variant="h3"
+          variant="h2"
           align="center"
           color="#41337A"
-          gutterBottom
           sx={{
-            fontFamily: 'monospace',
+            fontFamily: "monospace",
             fontWeight: 700,
-            letterSpacing: '.1rem',
-          }}>
+            letterSpacing: ".1rem",
+          }}
+        >
           Get Cute With Beautify
         </Typography>
         <Typography
@@ -27,10 +28,30 @@ function Homepage() {
           color="text.secondary"
           paragraph
         >
-          Let Beautify to become your trusted companion on your beauty journey
+          Let Beautify become your trusted companion on your beauty journey.
         </Typography>
       </Box>
+      <div>
+        <img
+          src={makeupBanner}
+          alt="Makeup Banner"
+          style={{ width: "100%", maxWidth: "800px" }}
+        />
+      </div>
       <Container sx={{ textAlign: "left", color: "#41337A" }}>
+        <Typography
+          variant="h3"
+          align="center"
+          color="#41337A"
+          sx={{
+            fontFamily: "monospace",
+            fontWeight: 700,
+            letterSpacing: ".1rem",
+            pt: 5,
+          }}
+        >
+          Shop by category
+        </Typography>
         <Typography variant="h4">Lipstick</Typography>
         <Cards type="lipstick" />
         <Typography variant="h4">Mascara</Typography>
@@ -44,6 +65,9 @@ function Homepage() {
         <Typography variant="h4">Blush</Typography>
         <Cards type="blush" />
       </Container>
+      <footer style={{ textAlign: "center", marginBottom: "30px" }}>
+        <Typography variant="subtitle1">Beautify, Inc. 2023</Typography>
+      </footer>
     </div>
   );
 }
