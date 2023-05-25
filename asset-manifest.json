@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Beauty-Website/static/css/main.82b370a8.css",
-    "main.js": "/Beauty-Website/static/js/main.f2a9f934.js",
+    "main.js": "/Beauty-Website/static/js/main.0ed4ffb6.js",
     "static/js/787.c6942f56.chunk.js": "/Beauty-Website/static/js/787.c6942f56.chunk.js",
     "static/media/makeupBanner.jpeg": "/Beauty-Website/static/media/makeupBanner.359b1f4e0994ed157165.jpeg",
     "index.html": "/Beauty-Website/index.html",
     "main.82b370a8.css.map": "/Beauty-Website/static/css/main.82b370a8.css.map",
-    "main.f2a9f934.js.map": "/Beauty-Website/static/js/main.f2a9f934.js.map",
+    "main.0ed4ffb6.js.map": "/Beauty-Website/static/js/main.0ed4ffb6.js.map",
     "787.c6942f56.chunk.js.map": "/Beauty-Website/static/js/787.c6942f56.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.82b370a8.css",
-    "static/js/main.f2a9f934.js"
+    "static/js/main.0ed4ffb6.js"
   ]
 }
