@@ -1,5 +1,3 @@
-import { useEffect, useState } from 'react';
-import { getProductByType } from '../api';
 import OrderedItemCard from '../components/OrderedItemCard';
 import { orderedItems } from '../utils/OrderedItemData';
 import {

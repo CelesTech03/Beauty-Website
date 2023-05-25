@@ -1,7 +1,5 @@
 import {
-  Container,
   Typography,
-  Box,
   Button,
   Card,
   CardMedia,
