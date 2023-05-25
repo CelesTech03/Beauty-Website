@@ -65,7 +65,7 @@ function Homepage() {
         <Typography variant="h4">Blush</Typography>
         <Cards type="blush" />
       </Container>
-      <footer style={{ textAlign: "center", marginBottom: "30px" }}>
+      <footer style={{ textAlign: "center", marginBottom: "20px" }}>
         <Typography variant="subtitle1">Beautify, Inc. 2023</Typography>
       </footer>
     </div>
